@@ -54,6 +54,80 @@
 
 // console.log(outerArray)
 
+//********************************Array methods in js*********************/
+// 1.create polyfill for map, filter and reduce method
+// const arr = [1,2, 3, 4, 8]
+// // const newArr = arr.map((ele, index) => ele*2)
+// // const newArr1 = arr.filter((e) => e == 2)
+// // const result = arr.reduce((acc, ele) => acc+ele,0)
+// // console.log(newArr1)
+// // console.log(result)
+
+// Array.prototype.myMap = function (cb) {
+//   const temp = []
+//   for (let i = 0; i < this.length; i++) {
+//     const cal = cb(this[i], i)
+//     temp.push(cal)
+//   }
+
+//   return temp;
+
+// }
+
+// Array.prototype.myFilter = function (cb) {
+//   const temp = [];
+//   for(let i = 0; i < this.length; i++) {
+//     const cal = cb(this[i], i)
+//     if (cal) {
+//       temp.push(this[i])
+//       break;
+//     }
+//   }
+//   return temp
+// }
+
+// Array.prototype.myReduce = function (cb, initialValue) {
+//   let sum = initialValue;
+//   for(let i = 0; i < this.length; i++) {
+//     let result = cb(sum, this[i])
+//     sum = result;
+//   }
+
+//   return sum;
+// }
+
+// console.log(arr.myMap((ele, index) => ele*2))
+// console.log(arr.myFilter((ele, index) => ele == 2))
+// console.log(arr.myReduce((acc, ele) => acc+ele, 0))
+
+//************************Currying in js*********************** */
+// 1. write a program to evaluate sum(6)(7)(2)
+// the below program is known as currying in js
+// currying is a technique in js where n arguments of a functions results in n functions with one of more arguments
+
+// const sum = (a) => {
+//   return function (b) {
+//     return function(c) {
+//       return a+b+c;
+//     }
+//   }
+// }
+
+// console.log(sum(6)(7)(2))
+
+//2. write a program to implement infinite currying (here we can use recursion)
+// const sum = (a) => {
+//   return function(b) {
+//     if (b) return sum(a+b);
+//     return a;
+//   }
+
+// }
+
+// console.log(sum(6)(7)(5)())
+// console.log(sum(6)(7)(5)(1)())
+
+
 //****************************hoisting in let and const***************************************
 // a = 10;
 // console.log(a)
@@ -417,50 +491,50 @@
 //**********************************OOPS in js****************************/
 // NOTE : static functions can be called outside of the class using class name inside class we can call without using anything
 // in oder to call non static functions outside of the class , we need to create an obj of it, and inside the class we need to attach this.funName
-class Person {
-  name
-  job
-  balance
+// class Person {
+//   name
+//   job
+//   balance
 
-  static printDetails(name, job) {
-    console.log("my name is " + name + " and i am a " + job)
-  }
+//   static printDetails(name, job) {
+//     console.log("my name is " + name + " and i am a " + job)
+//   }
 
-  printBalances() {
-    console.log("my name is " + this.name + " and i am a " + this.job)
-  }
+//   printBalances() {
+//     console.log("my name is " + this.name + " and i am a " + this.job)
+//   }
 
-  constructor(name, job, balance) {
-    this.name = name;
-    this.job = job;
-    this.balance = balance;
-  }
+//   constructor(name, job, balance) {
+//     this.name = name;
+//     this.job = job;
+//     this.balance = balance;
+//   }
 
-}
+// }
 
-const newPerson = new Person("rahul", "CEO", 13333)
-// newPerson.printBalances()
-// Person.printDetails("aman" , "accountant")
+// const newPerson = new Person("rahul", "CEO", 13333)
+// // newPerson.printBalances()
+// // Person.printDetails("aman" , "accountant")
 
-class Dog extends Person {
-  type
+// class Dog extends Person {
+//   type
 
-  constructor(name, job, type) {
-    super(name, job);
-    this.type = type;
-  }
+//   constructor(name, job, type) {
+//     super(name, job);
+//     this.type = type;
+//   }
 
-  printBalances() {
-    super.printBalances()
-    console.log("and i am a " +this.type)
-  }
+//   printBalances() {
+//     super.printBalances()
+//     console.log("and i am a " +this.type)
+//   }
 
 
-}
+// }
 
-// Dog.printDetails("tommy", "gaurd")
-const newDog = new Dog("tommy", "gaurd", "animal")
-newDog.printBalances()
+// // Dog.printDetails("tommy", "gaurd")
+// const newDog = new Dog("tommy", "gaurd", "animal")
+// newDog.printBalances()
 
 
 
