@@ -639,7 +639,6 @@
 //   }
 
 //   console.log(pairSum)
-
 // }
 
 // let arr = [1, 3, 4, 6, 7, 8, 9, 10, 12]
@@ -658,11 +657,28 @@
 //   main.textContent = value;
 //   index++;
 //   if(index === arr.length) index = 0
-
-
 // })
 
+// ******************************Array functions*********************************
+// const arr = [1, 4, 5, 6, 7, 8 ];
+// console.log(arr.slice(0, 3)) // slice doesn't mutate the original array whereas splice mutates the original array
+// console.log(arr.splice(0, 4))
+// console.log(arr)
+// const store = arr.map((e, i) => e*2)
+// console.log(store)
 
+//polyfill for map
+// Array.prototype.myMap = function (cb) {
+//   let temp = []
+//   for(let i = 0; i< this.length; i++) {
+//     temp.push(cb(this[i], i))
+//   }
+
+//   return temp;
+
+// }
+
+// console.log(arr.myMap((e, i) => e*2))
 
 
 
