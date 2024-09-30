@@ -282,6 +282,24 @@
 
 // console.log(Function.__proto__, Function.prototype)
 
+// ***********************Protypel inheritance******************************
+// const obj = {
+//   name: 'saurabh',
+//   city: "ludhiana",
+//   f1:  () => {
+//     console.log(this.name)
+//   }
+// }
+
+// const obj2 = {
+//   name: "aman",
+//   city: "bhopal",
+// }
+
+// obj.__proto__ = obj2
+
+// console.log(obj.__proto__.name, obj.name, obj2.__proto__)
+
 //***************************call, bind, apply*************** */
 // so basically if we want to inherit method of another object and set its this to another differnt obj
 
@@ -535,6 +553,116 @@
 // // Dog.printDetails("tommy", "gaurd")
 // const newDog = new Dog("tommy", "gaurd", "animal")
 // newDog.printBalances()
+
+//*********************************Debouncing and throttling************************/
+// debouncing:- e.g(search bar usually has this concept, where on a specific delay in the time of typing an api call is made) it is a technique where we stop the execution of some functions for a certain amount of time and run it again after a specified time
+// Throttling:- e.g(infinite scroll in instagram, where an api call is made when we reaches to a specific point to the bottom of screen)
+// const btn = document.querySelector(".btn");
+// const btnClicked = document.querySelector('.btn-pressed')
+// const btnTriggerd = document.querySelector('.btn-triggered')
+
+// let btnClickedCount = 0;
+// let btnTriggerdCount = 0;
+
+// let clicked = false
+
+// btn.addEventListener('click', () => {
+//   console.log("clicked")
+//   clicked = true;
+//   ++btnClickedCount;
+//   btnClicked.innerHTML = btnClickedCount;
+//   // debouncedTrigger() // this should increment only if there is pause of 800ms in the after an event (search bar)
+//   throttleTrigger() // this will trigger after every 800 ms when the btn is clicked, and will not trigger when the difference is < 800ms (infinite load)
+// })
+
+// const debouncedTrigger = _.debounce(() => {
+  // ++btnTriggerdCount
+  // btnTriggerd.innerHTML = btnTriggerdCount
+// }, 800)
+
+// const throttleTrigger = _.throttle(() => {
+//   ++btnTriggerdCount
+//   btnTriggerd.innerHTML = btnTriggerdCount
+// }, 800)
+
+// const myDebouncedTrigger = (cb, wait) => {
+//   let timer;
+
+//   return function () {
+//     if(timer) clearTimeout(timer)
+//     timer = setTimeout(() => {
+//       cb()
+//     }, wait)
+//   }
+// }
+
+// const debouncedTrigger = myDebouncedTrigger(() => {
+//   ++btnTriggerdCount
+//   btnTriggerd.innerHTML = btnTriggerdCount
+// }, 800)
+
+// const myThrottleTrigger = (cb, wait) => {
+//   let lastTime = 0;
+
+//   return function () {
+//     let now = Date.now()
+//     if (now - lastTime < wait) return;
+//     lastTime = now;
+//     cb();
+//   }
+
+// }
+
+// const throttleTrigger = myThrottleTrigger(() => {
+//   ++btnTriggerdCount
+//   btnTriggerd.innerHTML = btnTriggerdCount
+// }, 800)
+
+// const checkPairSum = (arr, sum) => {
+//   let pairSum = []
+//   let start = 0;
+//   let end = arr.length - 1;
+
+//   while (start < end) {
+//     let total = arr[start] + arr[end];
+//     if (total === sum) {
+//       pairSum.push([arr[start], arr[end]])
+//       start ++;
+//       end --;
+//     }
+//     if (total < sum) {
+//       start ++;
+//     }
+//     if (total > sum) {
+//       end--;
+//     }
+//   }
+
+//   console.log(pairSum)
+
+// }
+
+// let arr = [1, 3, 4, 6, 7, 8, 9, 10, 12]
+// let sum  = 15
+
+// checkPairSum(arr, sum)
+
+// ******************************Dom manipulation***************************8
+
+// const arr = ["aman", "golu", "pandey"]
+
+// const main = document.querySelector('.main')
+// let index = 0;
+// main.addEventListener('click', () => {
+//   const value = arr[index];
+//   main.textContent = value;
+//   index++;
+//   if(index === arr.length) index = 0
+
+
+// })
+
+
 
 
 
