@@ -1,0 +1,38 @@
+PART-A (Basics)
+why js is a dynamic language
+Difference between let, const, var
+Events, Event deligation, Event Capturing, Event Bubbling
+closures in javascript
+hoisting in js
+why let is not hoisted
+global scope, functional scope and lexical scope
+callbacks and higher order functions
+this keyword and its reference
+Array methods (map, reduce, filter, slice, splice)
+Objects and their methods (.entries, .keys, .values)
+Data manupulation (convert this array containing data into object and vice versa)
+Promises and their methods (.all, .race etc)
+Asynchronous nature of js i.e async await
+Event loop and its architecture
+oops, inheritance , super keyword
+
+PART-B(Intermidiate)
+implement custom caching inside a function
+implement Currying and infinite Currying
+Throttling and Debouncing
+PollyFills of Arrays method (map, reduce, filter, slice)
+Pollyfills of Promises
+Call, Bind, Apply
+Recursion
+Difference between POST and PUT method
+fetch data from API using a POST method
+reading error codes (401, 501 , 201, etc)
+
+
+
+
+
+
+
+
+
