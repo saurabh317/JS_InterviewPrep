@@ -198,7 +198,7 @@
 // const nomalPrint = () => {
 //   console.log(this)
 // }
-// // print();
+// nomalPrint();
 
 // const printThroughFunctionExpression = function () {
 //   console.log(this)
@@ -423,7 +423,7 @@
 //   }
 
 //   const c = { // here this will point to {}
-//     func2: ()=>{
+//     func2: () => {
 //       console.log(this);
 //     }
 //   }
@@ -568,22 +568,22 @@
 
 // btn.addEventListener('click', () => {
 //   console.log("clicked")
-//   clicked = true;
+//   clicked = true;60+
 //   ++btnClickedCount;
 //   btnClicked.innerHTML = btnClickedCount;
 //   // debouncedTrigger() // this should increment only if there is pause of 800ms in the after an event (search bar)
 //   throttleTrigger() // this will trigger after every 800 ms when the btn is clicked, and will not trigger when the difference is < 800ms (infinite load)
 // })
 
-// const debouncedTrigger = _.debounce(() => {
-  // ++btnTriggerdCount
-  // btnTriggerd.innerHTML = btnTriggerdCount
-// }, 800)
+// // const debouncedTrigger = _.debounce(() => {
+// //   ++btnTriggerdCount
+// //   btnTriggerd.innerHTML = btnTriggerdCount
+// // }, 800)
 
-// const throttleTrigger = _.throttle(() => {
-//   ++btnTriggerdCount
-//   btnTriggerd.innerHTML = btnTriggerdCount
-// }, 800)
+// // const throttleTrigger = _.throttle(() => {
+// //   ++btnTriggerdCount
+// //   btnTriggerd.innerHTML = btnTriggerdCount
+// // }, 800)
 
 // const myDebouncedTrigger = (cb, wait) => {
 //   let timer;
